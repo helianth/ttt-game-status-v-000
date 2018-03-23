@@ -59,3 +59,21 @@ def over?(board)
     false
   end
 end
+
+def winner(board)
+  WIN_COMBINATIONS.each do |wcombo|
+    index1 = wcombo[0]
+    index2 = wcombo[1]
+    index3 = wcombo[2]
+    token1 = board[index1]
+    token2 = board[index2]
+    token3 = board[index3]
+      if won?(board) == true && token1 == "X"
+        return token1
+      elsif won?(board) == true && token1 == "O"
+        return token1
+      else
+      end
+  end
+  nil
+end
